@@ -1,0 +1,70 @@
+@import 'fonts.css';
+
+@keyframes gradient {
+  0% {
+    background-position: 0%
+  }
+
+  100% {
+    background-position: 100%
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+:root {
+  --body-text: sans-serif;
+  --body-text-bold: sans-serif;
+  --title: sans-serif;
+  --subtitle: serif;
+  --text-color: #000;
+  --fade-in-effect: fadein 800ms;
+  font-size: calc(1em + 0.5vw);
+  font-family: var(--body-text);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-animation: var(--fade-in-effect);
+  -moz-animation: var(--fade-in-effect);
+  -ms-animation: var(--fade-in-effect);
+  -o-animation: var(--fade-in-effect);
+  animation: var(--fade-in-effect);
+}
+
+::selection {
+  color: white;
+  background: var(--text-color);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation;
+  scroll-behavior: smooth;
+}
+
+body {}
